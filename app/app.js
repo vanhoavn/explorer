@@ -90,7 +90,7 @@ angular.module('ethExplorer', ['ngRoute','ui.bootstrap','filters','ngSanitize'])
             //$locationProvider.html5Mode(true);
     }])
     .run(function($rootScope) {
-        var Web3 = require('web3');
+        var Web3 = window.Web3 || require('web3');
 
         // begin AltSheets changes
         var web3 = new Web3();
